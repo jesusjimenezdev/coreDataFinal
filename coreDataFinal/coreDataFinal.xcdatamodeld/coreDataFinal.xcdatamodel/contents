@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13221.4" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Imagenes" representedClassName="Imagenes" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="id_lugares" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="imagenes" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <relationship name="lugares" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Lugares" inverseName="imagenes" inverseEntity="Lugares" syncable="YES"/>
+    </entity>
+    <entity name="Lugares" representedClassName="Lugares" syncable="YES" codeGenerationType="class">
+        <attribute name="descripcion" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="latitud" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="longitud" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="imagenes" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Imagenes" inverseName="lugares" inverseEntity="Imagenes" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Lugares" positionX="-63" positionY="-45" width="128" height="135"/>
+        <element name="Imagenes" positionX="225" positionY="30" width="128" height="105"/>
+    </elements>
+</model>
