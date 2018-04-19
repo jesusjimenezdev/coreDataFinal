@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  coreDataFinal
-//
-//  Created by Jorge Maldonado Borbón on 23/09/17.
-//  Copyright © 2017 Jorge Maldonado Borbón. All rights reserved.
-//
-
 import UIKit
 import CoreData
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate {
@@ -138,7 +130,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let destino = segue.destination as! MapaViewController
             destino.coordLugares = fila
         }
-        
         
     }
 
