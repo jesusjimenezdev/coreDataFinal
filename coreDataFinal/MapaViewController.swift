@@ -1,14 +1,7 @@
-//
-//  MapaViewController.swift
-//  coreDataFinal
-//
-//  Created by Jorge Maldonado Borbón on 24/09/17.
-//  Copyright © 2017 Jorge Maldonado Borbón. All rights reserved.
-//
-
 import UIKit
 import MapKit
 import CoreLocation
+
 class MapaViewController: UIViewController, CLLocationManagerDelegate {
 
     var coordLugares : Lugares!

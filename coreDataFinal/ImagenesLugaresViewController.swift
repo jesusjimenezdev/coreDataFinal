@@ -1,13 +1,6 @@
-//
-//  ImagenesLugaresViewController.swift
-//  coreDataFinal
-//
-//  Created by Jorge Maldonado Borbón on 23/09/17.
-//  Copyright © 2017 Jorge Maldonado Borbón. All rights reserved.
-//
-
 import UIKit
 import CoreData
+
 class ImagenesLugaresViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
 
     var imagenLugar : Lugares!
@@ -95,7 +88,7 @@ class ImagenesLugaresViewController: UIViewController, UIImagePickerControllerDe
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        let imagenTomada = info[UIImagePickerControllerEditedImage] as? UIImage
+        let imagenTomada = info[UIImagePickerControllerOriginalImage] as? UIImage
         imagen = imagenTomada
         
         let contexto = conexion()
